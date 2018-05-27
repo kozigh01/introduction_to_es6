@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>String Template Literals</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  </head>
+  <body>
+ 
+     <script>
+       const info = {
+         fname: 'Bob',
+         lname: 'Smith',
+         city: 'Omaha',
+         state: 'Nebraska',
+         zip: 12345
+       }
+
+       // destructure into same name
+       const { fname, lname, zip} = info;
+       console.log(fname, lname, zip);
+
+       // destructure into new name
+       const { fname: fn, lname: ln, zip: zipcode} = info;
+       console.log(`${fn} ${ln}: ${zipcode}`);
+
+       // destructure array
+       const name = ['bob', 'sally', 'rick', 'marley'];
+       let [name1, name2] = name;
+       console.log(name1, name2);
+       name2 = 'new-name';
+       console.log(name1, name2);
+      </script>
+   </body>
+</html>
