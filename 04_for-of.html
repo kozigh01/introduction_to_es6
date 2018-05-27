@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>for-of</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+
+  <script>
+    const incomes = [62500, 67000, 75000];
+    let total = 0;
+
+    for (const income of incomes) {
+      console.log(income);
+      total += income;
+    }
+
+    console.log(`Total: ${total}`);
+
+    // for-of works over any iterable (string, set, map, custom, generator produced, etc.)
+    let sentence = "this is a test";
+    for (const char of sentence) {
+      console.log(char);
+    }
+  </script>
+</body>
+
+</html>
