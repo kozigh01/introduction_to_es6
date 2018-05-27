@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>String Template Literals</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+
+  <script>
+    const makeObject = (key1, key2) => {
+      return {
+        key1: key1,
+        key2: key2
+      }
+    }
+    console.log(makeObject('bob','jill'));
+
+    // if object key and variable for value have same name, can shorten object literal
+    const makeObject2 = (key1, key2) => {
+      return {
+        key1,
+        key2
+      }
+    }
+    console.log(makeObject2('bob', 'jill'));
+
+
+  </script>
+</body>
+
+</html>
