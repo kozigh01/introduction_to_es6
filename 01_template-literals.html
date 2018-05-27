@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>String Template Literals</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  </head>
+  <body>
+     <p id="paragraph"></p>
+ 
+     <script>
+        // interpolate variables
+        const word1 = 'hello';
+        const word2 = 'world';
+        const sentence = `${word1} ${word2}!`;
+        console.log(sentence);
+  
+        // can evaluation expressions
+        console.log(`${1} + ${2} = ${1 + 2}`)
+  
+        // can have multiple lines
+        const multiline = `line 1
+        line 2
+        line 3
+        `;
+        document.getElementById('paragraph').innerText = multiline;
+      </script>
+   </body>
+</html>
