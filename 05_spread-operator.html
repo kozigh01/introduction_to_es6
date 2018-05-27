@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>spread operator</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+
+  <script>
+    let numbers = [1, 2, 3, 4, 5, 6, 7];
+
+    // logs the array object
+    console.log(numbers);
+
+    // logs the idividual numbers
+    console.log(...numbers);
+
+    // makes a new array with the elements from numbers array
+    let numbers2 = [...numbers];
+    numbers2.push(true);
+    console.log(numbers2);
+    console.log(...numbers2);
+    console.log(...numbers);
+
+    // also works with array key/value pairs
+    const example1 = {
+      fname: 'Bob',
+      lname: 'Jenkins'
+    }
+    const example2 = {
+      ...example1,
+      mname: 'Randy'
+    }
+    console.log(example2);
+
+    const example3 = {
+      lname: 'Jones',
+      mname: 'Randy',
+      ...example1
+    };
+    console.log(example3);
+
+    const example4 = {
+      ...example1,
+      lname: 'Jones',
+      mname: 'Randy'
+    };
+    console.log(example4);
+  </script>
+</body>
+
+</html>
