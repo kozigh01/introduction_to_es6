@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>rest operator</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+
+  <script>
+    let numbers = [1, 2, 3, 4, 5, 6, 7];
+
+    // rest operator (...) turns the remaining set of function parameters to an array
+    function add(firstParam, ...nums) {
+      for (num of nums) {
+        console.log(num);
+      }
+      console.log(firstParam);
+    }
+
+    add(4, 5, 6, 7, 8);
+  </script>
+</body>
+
+</html>
