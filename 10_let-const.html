@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>let / const</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+
+  <script>
+    // var is function scoped and is hoised
+    if(false) {
+      var exampleVar = 4;
+    }
+    console.log(exampleVar);  // logs undefined
+
+    // let is blocked scoped and is not hoisted (var is function scoped and is hoisted)
+    // if(false) {
+    //   let exampleLet = 5;
+    // }
+    // console.log(exampleLet);  // throws undefined error
+
+    // const exampleConst = 6;
+    // exampleConst = 7; // can't reasign, throws error - can't assign to constant variable
+    // console.log(exampleConst);
+
+    const exampleConstArray = [2,3];
+    exampleConstArray.push(1);
+    console.log(exampleConstArray); // const is not a deep constant, only constant at root level - so, can change properties on root object/array
+
+    const exampleConstObj = {
+      prop1: 'Hello',
+      prop2: 'World'
+    };
+    exampleConstObj.prop2 = 'Earth';
+    exampleConstObj.prop3 = '!!'
+    console.log(exampleConstObj); // const is not a deep constant, only constant at root level - so, can change properties on root object/array
+    
+
+  </script>
+</body>
+
+</html>
