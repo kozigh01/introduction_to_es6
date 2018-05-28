@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Sets</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+
+  <script>
+  
+    // Sets only contain unique values, all duplicates are removed
+    const exampleSet = new Set([1,1,1,2,2,2,3,3,4,5]);
+    exampleSet.add(6).add(6).add(6);
+    console.log(exampleSet);
+    console.log(exampleSet.size);
+
+    const remove2 = exampleSet.delete(2);
+    console.log(remove2, exampleSet);
+
+    const remove18 = exampleSet.delete(18);
+    console.log(remove18, exampleSet);
+
+    // Set is iterable
+    for(i of exampleSet) {
+      console.log(i);
+    }
+    console.log(...exampleSet);
+
+    exampleSet.clear();
+    console.log(exampleSet);
+
+  </script>
+</body>
+
+</html>
