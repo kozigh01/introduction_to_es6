@@ -12,7 +12,7 @@
 
   <script type="module">
 
-    const apiUrl = 'https://fcctop100x.herokuapp.com/api/fccusers/top/alltime'
+    const apiUrl = 'https://fcctop100.herokuapp.com/api/fccusers/top/alltime'
 
     // previous callback way
     // function getTop100Campers() {
@@ -38,6 +38,29 @@
       }
     }
     getTop100CampersAsync();
+
+
+    // course challenge
+    function resolveAfter3Seconds() {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve('resolved!');
+        }, 3000);
+      })
+    }
+
+    // promise way
+    resolveAfter3Seconds()
+      .then((data) => {
+        console.log(data);
+      });
+      
+    // async-await way
+    async function asyncWay() {
+      let data = await resolveAfter3Seconds();
+      console.log(data);
+    }
+    asyncWay();
 
   </script>
 </body>
