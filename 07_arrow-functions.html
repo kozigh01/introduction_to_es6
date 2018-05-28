@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>rest operator</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+
+  <script>
+    let numbers = [1, 2, 3, 4, 5, 6, 7];
+
+    // when arrow function is equivalent to a function with one return line, can simplify
+    const totalReducer = (total, x) =>  total + x;
+
+    // when arrow function has multiple lines, use a function body
+    const add = (...nums) => {
+      const total = nums.reduce(totalReducer);
+      console.log(total);
+    }
+
+    add(4, 5, 6, 7, 8);
+  </script>
+</body>
+
+</html>
