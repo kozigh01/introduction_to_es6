@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Classes</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+
+  <script type="module">
+
+    import { Animal, Cat } from './13_animal.js';
+
+    let dog = new Animal('Dog', 4);
+    dog.sound = 'ruff';
+    dog.legs = 5;
+
+    console.log(dog);
+    dog.makeNoise('Bark, bark');
+
+    console.log(dog.metaData);
+
+    // static members are accessed directly from the class
+    console.log(Animal.saySomething());
+    console.log(Animal.saySomething());
+
+    let cat = new Cat('Cat', 3);
+    console.log(cat.metaData);
+    cat.makeNoise();
+  </script>
+</body>
+
+</html>
