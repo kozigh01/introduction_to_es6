@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>padStart / padEnd</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+
+  <script type="module">
+
+    let example = 'Omaha';
+
+    console.log(example.padStart(10, 'a'));
+    console.log(example.padStart(5, 'a'));
+    console.log(`'${example.padStart(10)}'`); // second parameter defualts to space
+    console.log(`'${example.padStart(5)}'`); // second parameter defualts to space
+
+    console.log(example.padEnd(10, 'a'));
+    console.log(example.padEnd(5, 'a'));
+    console.log(`'${example.padEnd(10)}'`); // second parameter defualts to space
+    console.log(`'${example.padEnd(5)}'`); // second parameter defualts to space
+
+  </script>
+</body>
+
+</html>
